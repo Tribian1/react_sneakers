@@ -10,7 +10,7 @@ const arr = [
 		imgUrl: "/img/sneakers/image 2 .jpg"
 	},
 	{
-		title:'Puma X Aka Future Rider', 
+		title:'Puma X Future Rider', 
 		price: 199.9, 
 		imgUrl: "/img/sneakers/image 3.jpg"
 	},

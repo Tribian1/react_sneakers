@@ -14,7 +14,7 @@ function Card(props) {
                     <span>Price:</span>
                     <b>{props.price}$</b>
                 </div>
-                <button className="button">
+                <button className={styles.button}>
                     <img width={11} height={11} src="/img/Group 91.svg" alt="plus" />
                 </button>
             </div>

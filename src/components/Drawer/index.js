@@ -2,7 +2,7 @@ import styles from './Drawer.module.scss'
 
 function Drawer() {
     return (
-        <div  className={styles.overlay}>
+        <div style={{display:'none'}} className={styles.overlay}>
             <div className={styles.drawerBlock}>
                 <h2 className="d-flex justify-between mb-30">Bucket
                     <img className="cu-p" src="/img/decline.svg" alt="btn" />

@@ -17,6 +17,15 @@
         position: absolute;
         cursor: pointer;
     }
+    .button {
+        background: #ffff;
+        border: 1px solid #f2f2f2;
+        box-sizing: border-box;
+        border-radius: 8px;
+        height: 32px;
+        width: 32px;
+        cursor: pointer;
+    }
 
     span {
         font-size: 13px;
@@ -32,4 +41,5 @@
        font-weight: 400;
        font-size: 14px; 
     }
+    
 }
