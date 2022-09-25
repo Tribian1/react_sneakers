@@ -3,6 +3,29 @@ import Card from "./components/Card";
 import Header from "./components/Header";
 import Drawer from "./components/Drawer";
 
+const arr = [
+	{
+		title:'Nike Kyrie 7', 
+		price: 113.1, 
+		imgUrl: "/img/sneakers/image 2 .jpg"
+	},
+	{
+		title:'Puma X Aka Future Rider', 
+		price: 199.9, 
+		imgUrl: "/img/sneakers/image 3.jpg"
+	},
+	{
+		title:'Nike Blazer Mid Sued', 
+		price: 99.9,
+		imgUrl: "/img/sneakers/image 4.jpg"
+	},
+	{
+		title:'Nike Air Max 270', 
+		price: 109.67, 
+		imgUrl: "/img/sneakers/image 5.jpg"
+	},
+]
+ 
 function App() {
   return (
 	<div className="wrapper clear">
@@ -18,60 +41,12 @@ function App() {
 				</div>
 			</div>
 			<div className="d-flex">
-				<Card />
-				<div className="card">
-					<img width={133} height={112} src="/img/sneakers/image 3.jpg" alt="sneakers" />
-					<h5>Nike Blazer Mid Suede</h5>
-					<div className="d-flex justify-between align-center">
-						<div className="d-flex flex-column">
-							<span>Price:</span>
-							<b>113$</b>
-						</div>
-						<button className="button">
-							<img width={11} height={11} src="/img/Group 91.svg" alt="plus" />
-						</button>
-					</div>
-				</div>
-				<div className="card">
-					<img width={133} height={112} src="/img/sneakers/image 4.jpg" alt="sneakers" />
-					<h5>Nike Blazer Mid Suede</h5>
-					<div className="d-flex justify-between align-center">
-						<div className="d-flex flex-column">
-							<span>Price:</span>
-							<b>113$</b>
-						</div>
-						<button className="button">
-							<img width={11} height={11} src="/img/Group 91.svg" alt="plus" />
-						</button>
-					</div>
-				</div>
-				<div className="card">
-					<img width={133} height={112} src="/img/sneakers/image 5.jpg" alt="sneakers" />
-					<h5>Nike Blazer Mid Suede</h5>
-					<div className="d-flex justify-between align-center">
-						<div className="d-flex flex-column">
-							<span>Price:</span>
-							<b>113$</b>
-						</div>
-						<button className="button">
-							<img width={11} height={11} src="/img/Group 91.svg" alt="plus" />
-						</button>
-					</div>
-				</div>
-				<div className="card">
-					<img width={133} height={112} src="/img/sneakers/image 2 .jpg" alt="sneakers" />
-					<h5>Nike Blazer Mid Suede</h5>
-					<div className="d-flex justify-between align-center">
-						<div className="d-flex flex-column">
-							<span>Price:</span>
-							<b>113$</b>
-						</div>
-						<button className="button">
-							<img width={11} height={11} src="/img/Group 91.svg" alt="plus" />
-						</button>
-					</div>
-				</div>
-
+				{arr.map((obj) => (
+					<Card 
+					title={obj.title} 
+					price={obj.price} 
+					imageUrl = {obj.imgUrl} />
+				))}
 			</div>
 	
 		</div>

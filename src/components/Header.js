@@ -9,12 +9,12 @@ function Header() {
 				</div>
 			</div>
 			<ul className="d-flex">
-				<li className="mr-30">
-					<img  src="/img/Group.svg" alt="Logo" />
-					<span>1205$</span>
+				<li className=" d-flex mr-20 cu-p">
+					<img className="mr-10" src="/img/Group.svg" alt="Logo" />
+					<span className="">1205$</span>
 				</li>
 				<li>
-					<img  src="/img/Union.svg" alt="Logo" />
+					<img className="cu-p"  src="/img/Union.svg" alt="Logo" />
 				</li>
 			</ul>
 		</header>
