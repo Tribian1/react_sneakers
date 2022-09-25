@@ -1,6 +1,7 @@
 import styles from './Card.module.scss'
 
 function Card(props) {
+
     return (
         <div className={styles.card}>
             <div className="favorite">	
