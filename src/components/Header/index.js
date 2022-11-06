@@ -25,12 +25,12 @@ function Header(props) {
 					<span>{totalPrice}$</span>
 				</li>
 				<li className="cu-p mr-20">
-					<Link to="/favorites" onClick={() => window.location.href="/favorites"}>
+					<Link to="favorites" onClick={() => window.location.href="favorites"}>
 						<img src="img/favorite.svg" alt="favorite" />
 					</Link>
 				</li>
 				<li>
-					<Link to="/orders" onClick={() => window.location.href="/orders"}>
+					<Link to="orders" onClick={() => window.location.href="orders"}>
 						<img src="img/Union.svg" alt="user"  />
 					</Link>
 				</li>
