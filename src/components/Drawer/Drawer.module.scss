@@ -6,10 +6,26 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.1);
     z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    overflow: hidden;;
+    
+    
+}
+
+.overlayVisible{
+    visibility: visible;
+    opacity: 1;
+
+    .drawerBlock {
+        transform: translate(0);
+    }
+
 }
 
 .drawerBlock {
-    display:flex;
+    display: flex;
     flex-direction: column;
     position: absolute;
     width: 420px;
@@ -18,6 +34,9 @@
     background:#ffffff;
     box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
     padding: 30px;
+    transform: translate(100%);
+    transition: transform 0.3s ease-in-out;
+
 
     .items {
         flex: 1;
@@ -62,6 +81,10 @@
         cursor: pointer;
         transition: background 0.1s ease-in-out;
 
+        &:disabled {
+            background-color: #bebebe !important;
+            cursor: default;
+        }
         
         &:hover {
             background: lighten(#9dd558, 5%)
@@ -73,6 +96,84 @@
 
     .greenButton {
         position: relative;
+       
+        &:disabled {
+            animation: button-loading 0.6s ease-in-out;
+        }
+
+        
+        &:hover {
+            img {
+                transform: translateX(5px);
+            }
+        }
+        
+        img {
+            position: absolute;
+            right: 30px;
+            top: 20px;
+            transition: transform 0.15s ease-in-out;
+        }
+    }
+}
+
+.cartEmpty {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+    
+    p {
+        line-height: 24px;
+    }
+    .greenButton {
+        width: 245px;
+        margin-top: 20px;
+
+        &:hover {
+            img {
+                transform: rotate(180deg) translateX(3px);
+            }
+        }
+
+        img {
+            position: relative; 
+            top: 1px;
+            margin-right: 15px;
+            transition: transform 0.15s ease-in-out;
+
+        }
+    }
+    .greenButton {
+        width: 100%;
+        height: 55px;
+        background: #9dd558;
+        border-radius: 18px;
+        border: 0;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.1s ease-in-out;
+
+       
+
+        
+        &:hover {
+            background: lighten(#9dd558, 5%)
+        }
+        &:active {
+            background: darken(#9dd558, 5%)
+        }   
+    }
+
+    .greenButton {
+        position: relative;
+
+       
+       
         
         &:hover {
             img {
@@ -91,6 +192,7 @@
 
 .cartItem {
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
     margin-bottom: 20px;
     border: 1px solid #f3f3f3;
@@ -112,3 +214,16 @@
         }
     }
 }
+
+@keyframes button-loading {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
