@@ -40,7 +40,7 @@ function Drawer({ onClose, onRemove, items = [], opened }) {
         <div className={`${styles.overlay} ${opened ? styles.overlayVisible : ''}`}>
             <div className={styles.drawerBlock}>
                 <h2 className="d-flex justify-between mb-30">Bucket
-                    <img onClick={onClose} className="cu-p" src="/img/decline.svg" alt="btn-close" />
+                    <img onClick={onClose} className="cu-p" src="img/decline.svg" alt="btn-close" />
                 </h2>
 
                 {items.length > 0 ? (
@@ -55,7 +55,7 @@ function Drawer({ onClose, onRemove, items = [], opened }) {
                                 <p className="mb-5">{obj.title}</p>
                                 <b>{obj.price}$</b>
                             </div>
-                            <img onClick={() => onRemove(obj.id)} id='remove' className={styles.removeBtn} src="/img/decline.svg" alt="btn" />
+                            <img onClick={() => onRemove(obj.id)} id='remove' className={styles.removeBtn} src="img/decline.svg" alt="btn" />
                         </div>)
                 )}
                     </div>
@@ -72,14 +72,14 @@ function Drawer({ onClose, onRemove, items = [], opened }) {
                                     <b>{Math.round((totalPrice / 100) * 5)}$</b>
                                 </li>
                             </ul>
-                            <button disabled={isLoading} onClick={onClickOrder} className={styles.greenButton}>Make your order <img src="/img/arrow.svg" alt="arrow" /></button>
+                            <button disabled={isLoading} onClick={onClickOrder} className={styles.greenButton}>Make your order <img src="img/arrow.svg" alt="arrow" /></button>
                         </div>
                 </div>
                 ) : (
                     <Info  
                     title={isOrderComplete ? "The order is done!" : "Empty Bucket "} 
                     description={isOrderComplete ? `You order # ${orderId} will be shipped soon!` : 'Add at list one pair of snikears'}
-                    image={isOrderComplete ? "/img/done to add.jpg" : "/img/bucket.png"} 
+                    image={isOrderComplete ? "img/done to add.jpg" : "img/bucket.png"} 
                     /> 
                     )
                 }
