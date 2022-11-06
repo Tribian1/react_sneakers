@@ -1,3 +1,30 @@
+my pet project using CRA
+simpel sneakers shop with diferent tools and tasks
+using: 
+-axios request
+-https://mockapi.io/ for keeping information about items, and use for post,delet,and request from server.
+-react router
+-react hooks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
